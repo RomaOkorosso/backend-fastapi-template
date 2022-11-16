@@ -18,4 +18,3 @@ from sqlalchemy.orm import Session
 #             is_superuser=True,
 #         )
 #         user = crud.user.create(db, obj_in=user_in)
-

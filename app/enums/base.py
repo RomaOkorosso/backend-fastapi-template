@@ -21,9 +21,7 @@ class BaseEnum(Generic[ModelType], BaseModel):
         items = db.query(model).all()
         db.close()
 
-        db_item: ModelType | None = next(
-            filter(lambda x: x.name == value, items), None
-        )
+        db_item: ModelType | None = next(filter(lambda x: x.name == value, items), None)
 
         if db_item is None:
             #  logger.error(f"unsupported {ModelType} item received: {value}")

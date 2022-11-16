@@ -10,7 +10,7 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:8081",
-    "http://localhost:8000"
+    "http://localhost:8000",
 ]
 
 app.add_middleware(
@@ -25,6 +25,7 @@ app.add_middleware(
 # app.include_router(name_router)
 
 # run on app startup events
+
 
 @app.on_event("startup")
 async def startup_event():
